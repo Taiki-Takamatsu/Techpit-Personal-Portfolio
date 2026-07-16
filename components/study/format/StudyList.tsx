@@ -11,8 +11,6 @@ export default function StudyList({
   study,
 }: Props) {
   return (
-
-
     <div className="rounded-lg border-4 border-gray-200 p-6 h-140 flex flex-col">
       <div className="flex justify-center">
         <Image
@@ -51,8 +49,9 @@ export default function StudyList({
           </span>
           <div className="mt-2 flex flex-wrap gap-2">
             {
-              study.techIcon.map((icon) => (
+              study.techIcon.map((icon, index) => (
                 <Image
+                  key={index}
                   src={icon}
                   alt="TechIcon"
                   width={50}
