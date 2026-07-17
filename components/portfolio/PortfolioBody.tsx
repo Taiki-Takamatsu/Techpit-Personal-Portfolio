@@ -8,6 +8,7 @@ import PortfolioModal from "./format/PortfolioModal";
 import Image from "next/image";
 
 export default function PortfolioBody() {
+  // nullを許可するという書き方
   const [selectedPortfolio, setSelectedPortfolio] = useState<Portfolio | null>(null);
 
 

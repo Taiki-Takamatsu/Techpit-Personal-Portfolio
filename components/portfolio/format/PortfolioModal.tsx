@@ -60,6 +60,23 @@ export default function PortfolioModal({
             </a>
           )}
         </div>
+        <div className="mt-3 font-bold text-2xl">
+          使用技術
+          <div className="mt-2 flex flex-wrap gap-2">
+            {
+              portfolio.techIcons.map((icon, index) => (
+                <Image
+                  key={index}
+                  src={icon}
+                  alt="TechIcon"
+                  width={50}
+                  height={50}
+                  className="mr-2"
+                />
+              ))
+            }
+          </div>
+        </div>
       </div>
     </div>
   );

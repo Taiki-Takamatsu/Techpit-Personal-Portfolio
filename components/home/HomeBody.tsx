@@ -1,9 +1,13 @@
+"use client";
+
 import TechIcons from "./format/TechIcons";
 import CertificationList from "./format/CertificationList";
 import SkillCard from "./format/SkillCard";
 import { Skills } from "./data/Skills";
 import ProfileList from "./format/ProfileList";
 import Image from "next/image";
+import { useState } from "react";
+import IconModal from "./format/IconModal";
 
 
 const langs = [
@@ -30,17 +34,22 @@ const langs = [
 ];
 
 export default function HoemBody() {
+  const [selectedIcon, setSelectedIcon] = useState(false);
   return (
     <div>
-      <a href="/" className="mt-3 flex justify-center text-5xl font-bold">HOME</a>
+      <h1 className="mt-3 flex justify-center text-5xl font-bold">HOME</h1>
+
+      <div>
+        <div className="mt-5 flex justify-center">
+          <Image
+            src="/taiki/Taiki_01.jpg" alt="taiki" width={200} height={200} className="rounded-full object-cover"
+            onClick={() => setSelectedIcon(true)}
+          />
+        </div>
+      </div>
 
       <h1 className="mt-5 flex justify-center text-3xl font-bold">プロフィール</h1>
 
-      <div>
-        <div className="flex justify-center">
-          <Image src="/taiki/Taiki_01.jpg" alt="taiki" width={200} height={200} className="rounded-full object-cover" />
-        </div>
-      </div>
 
       <ProfileList />
 
@@ -66,6 +75,7 @@ export default function HoemBody() {
           </div>
         </div>
       </div>
+      {selectedIcon && <IconModal onClose={() => setSelectedIcon(false)} />}
     </div >
   );
 }

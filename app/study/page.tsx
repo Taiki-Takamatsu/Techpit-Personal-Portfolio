@@ -6,12 +6,16 @@ import StudyBody from "@/components/study/StudyBody";
 export default function study() {
   return (
     <div>
-      <Header />
-      <main className="pt-16">
-        <StudyBody />
+      <div className="background-pattern" />
+      <div>
+        <Header />
+        <main className="pt-16">
+          <StudyBody />
 
-      </main>
-      <Footer />
-    </div >
+        </main>
+        <Footer />
+      </div >
+    </div>
+
   );
 }

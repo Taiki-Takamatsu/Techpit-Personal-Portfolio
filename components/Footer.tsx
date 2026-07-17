@@ -23,9 +23,9 @@ export default function Footer() {
 
         </div>
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <a href="/" className="text-3xl">
+          <p className="text-3xl">
             MENU
-          </a>
+          </p>
           <div className="border-t">
             <ul>
               <li className="mt-2">
