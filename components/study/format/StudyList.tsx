@@ -22,7 +22,7 @@ export default function StudyList({
       </div>
 
       <div className="mt-4 flex items-start justify-between gap-4 border-b-3 border-gray-700">
-        <h2 className="text-2xl font-bold leading-tight">
+        <h2 className="text-2xl font-bold leading-tight line-clamp-3">
           {study.title}
         </h2>
         <a
@@ -38,7 +38,7 @@ export default function StudyList({
         </a>
       </div>
 
-      <div className="mt-3">
+      <div className="mt-3 line-clamp-4">
         {study.description}
       </div>
 

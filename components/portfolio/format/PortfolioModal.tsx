@@ -39,26 +39,17 @@ export default function PortfolioModal({
         <p className="mb-4 text-gray-700">{portfolio.description}</p>
 
         <div className="flex gap-4">
-          {portfolio.githubUrl && (
+          {Object.entries(portfolio.url).map(([key, value]) => (
             <a
-              href={portfolio.githubUrl}
+              key={key}
+              href={value}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline"
             >
-              GitHub
+              {key}
             </a>
-          )}
-          {portfolio.appUrl && (
-            <a
-              href={portfolio.appUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              App
-            </a>
-          )}
+          ))}
         </div>
         <div className="mt-3 font-bold text-2xl">
           使用技術

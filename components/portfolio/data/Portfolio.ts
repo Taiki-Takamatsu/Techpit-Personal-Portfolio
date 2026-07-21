@@ -2,30 +2,23 @@ export type Portfolio = {
   title: string;
   image: string;
   description: string;
-  githubUrl: string;
-  appUrl: string;
+  url: {
+    [key: string]: string
+  };
   techIcons: string[];
 }
 
 export const portfolioes: Portfolio[] = [
-  // {
-  //   title: "ポートフォリオサイト",
-  //   image: "/portfolio/Portfolio-site.jpg",
-
-  //   description: "今開いているWebサイト",
-
-  //   githubUrl: "https://github.com/Taiki-Takamatsu/Techpit-Personal-Portfolio",
-  //   appUrl: "http://localhost:3000",
-  //   techIcons: ["/logos/html5-original.svg", "/logos/css3-original.svg"],
-  // },
   {
     title: "ポートフォリオサイト",
     image: "/portfolio/Portfolio-site.jpg",
 
     description: "今開いているWebサイト",
 
-    githubUrl: "https://github.com/Taiki-Takamatsu/Techpit-Personal-Portfolio",
-    appUrl: "http://localhost:3000",
+    url: {
+      GitHub: "https://github.com/Taiki-Takamatsu/Techpit-Personal-Portfolio",
+      Demo: "http://localhost:3000",
+    },
     techIcons: ["/logos/typescript-original.svg", "/logos/React.webp", "/logos/Nextjs.webp", "/logos/tailwindcss-original.svg"],
   },
   {
@@ -34,8 +27,7 @@ export const portfolioes: Portfolio[] = [
 
     description: "最初に作った自己紹介ページ",
 
-    githubUrl: "https://github.com/Taiki-Takamatsu/Techpit-Personal-Portfolio",
-    appUrl: "",
+    url: {},
     techIcons: ["/logos/typescript-original.svg", "/logos/React.webp", "/logos/Nextjs.webp", "/logos/tailwindcss-original.svg"],
   },
   {
@@ -44,8 +36,10 @@ export const portfolioes: Portfolio[] = [
 
     description: "ReactとTypeScriptを用いて作成した。",
 
-    githubUrl: "https://github.com/Taiki-Takamatsu/markdown-editor",
-    appUrl: "http://localhost:8080",
+    url: {
+      GitHub: "https://github.com/Taiki-Takamatsu/markdown-editor",
+      Demo: "http://localhost:8080"
+    },
     techIcons: ["/logos/typescript-original.svg", "/logos/React.webp"],
   },
   {
@@ -54,8 +48,10 @@ export const portfolioes: Portfolio[] = [
 
     description: "初めてNext.jsを用いてアプリを作成した。",
 
-    githubUrl: "https://github.com/Taiki-Takamatsu/markdown-editor",
-    appUrl: "http://localhost:3001",
+    url: {
+      GitHub: "https://github.com/Taiki-Takamatsu/markdown-editor",
+      Demo: "http://localhost:3001"
+    },
     techIcons: ["/logos/typescript-original.svg", "/logos/React.webp", "/logos/Nextjs.webp"],
   },
   {
@@ -64,8 +60,9 @@ export const portfolioes: Portfolio[] = [
 
     description: "Flaskを用いてランデータを記録してくれるアプリを作成",
 
-    githubUrl: "https://github.com/Taiki-Takamatsu/",
-    appUrl: "http://127.0.0.1:5000/",
+    url: {
+      Demo: "http://127.0.0.1:5000/"
+    },
     techIcons: ["/logos/flask-original.svg", "/logos/python-original.svg"],
   },
 ]

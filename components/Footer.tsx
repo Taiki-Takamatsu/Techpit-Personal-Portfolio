@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="w-full left-0 w-full bg-blue-300 shadow-md z-50">
-      <a href="/" className="flex justify-center bg-blue-500 py-3">Back to Top</a>
+      <a href="#" className="flex justify-center bg-blue-500 py-3">Back to Top</a>
       <div className="max-w-6xl mx-auto  flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <a href="/" className="text-3xl">

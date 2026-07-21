@@ -9,7 +9,7 @@ export default function StudyBody() {
     <div>
       <h1 className="mt-5 flex justify-center text-3xl font-bold">学習記録</h1>
 
-      <div className="grid grid-cols-2 gap-4 p-4">
+      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
         {
           Studies.map((study) => (
             <StudyList
